@@ -1,0 +1,13 @@
+# App Setting options
+#   port: Integer
+#		port to run app on, apps will be in running mode by default,
+#		only when a port is specified
+#   dev_setup: Boolean
+#		Whether the app will be setup for development, viz: python setup.py develop
+
+lastuser:
+    port: 7000
+coaster:
+    dev_setup: true
+baseframe:
+    dev_setup: true
