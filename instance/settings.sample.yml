@@ -1,0 +1,6 @@
+vm:
+    hostname: "dev.hasgeek.com"
+    host_ip: "10.10.10.5"
+options:
+    base_host: "%s.dev.hasgeek.com"
+    repo_url: "git@github.com:hasgeek/%s.git"
