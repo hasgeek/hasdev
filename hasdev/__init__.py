@@ -62,7 +62,7 @@ def pull(app):
 def update_requirements(app):
 	print "Setting up requirements..."
 	if os.path.exists("%s/%s/requirements.txt" % (settings['options']['apps_path'], app)):
-		run(app, "sudo pip install -r requirements.txt")
+		run(app, "sudo pip install -r requirements.txt --upgrade")
 	else:
 		print "requirements.txt not found for %s" % app
 
