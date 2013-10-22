@@ -7,6 +7,7 @@ Virtual development environment for HasGeek apps using Vagrant.
 * Python
 * Virtualbox
 * Vagrant
+* `vagrant plugin install vagrant-hostsupdater`
 
 ## Setup Instructions
 * Address the prerequisites
