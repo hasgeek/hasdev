@@ -5,9 +5,57 @@
 #   dev_setup: Boolean
 #		Whether the app will be setup for development, viz: python setup.py develop
 
-lastuser:
-    port: 7000
 coaster:
     dev_setup: true
 baseframe:
     dev_setup: true
+nodular:
+	dev_setup: true
+flask-lastuser:
+	dev_setup: true
+nodules:
+	dev_setup: true
+flask-commentease:
+	dev_setup: true
+lastuser:
+    port: 7000
+hasweb:
+	port: 6400
+imgee:
+	port: 4500
+funnel:
+	port: 3000
+geekup:
+	port: 4000
+hacknight:
+	port: 8100
+hasgeek.tv:
+	port: 8000
+eventframe:
+	port: 8090
+hasjob:
+	port: 5000
+kharcha:
+	port: 9000
+peopleflow:
+	port: 8080
+serverdown:
+hasnew:
+	port: 8010
+contactpoint:
+	port: 8008
+rootconf:
+	port: 6200
+droidcon:
+	ef_template: true
+jsfoo:
+	ef_template: true
+fifthelephant:
+	ef_template: true
+cartonama-workshop:
+	ef_template: true
+blog:
+	ef_template: true
+ef2:
+hgapp:
+workshops:
