@@ -3,12 +3,13 @@
 Virtual development environment for HasGeek apps using Vagrant.
 
 ## Installation Prerequisites
+* The SSH key for the host machine should be added on github; git will be used on the host machine
 * Python
 * Virtualbox
 * Vagrant
 
 ## Setup Instructions
-* Install the prerequisites
+* Address the prerequisites
 * Clone repo to a location where you want to store your applications
 * Go to root directory
 * Run `python manage.py init`
