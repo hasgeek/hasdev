@@ -60,5 +60,6 @@ nosetests.xml
 
 #App
 apps
+logs
 .vagrant
 instance/settings.yml

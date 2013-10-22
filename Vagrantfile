@@ -14,7 +14,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box_url = "http://files.vagrantup.com/precise64.box"
   config.vm.network :private_network, ip: settings['vm']['host_ip']
   config.vm.hostname = settings['vm']['hostname']
-  
+
   apps.each do |app, opts|
     if opts['port']
       config.vm.network :forwarded_port, guest: opts['port'], host: opts['port']
@@ -26,7 +26,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     end
   end
 
-  config.vm.provision "shell", path: "startup.sh"
+  config.vm.provision "shell", path: "hasdev/init.sh"
 
   # Adding /etc/hosts entries, `vagrant plugin install vagrant-hostsupdater`
   if defined? VagrantPlugins::HostsUpdater
