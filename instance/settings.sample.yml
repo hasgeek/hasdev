@@ -4,3 +4,4 @@ vm:
 options:
     base_host: "%s.dev.hasgeek.com"
     repo_url: "git@github.com:hasgeek/%s.git"
+    apps_path: "apps"
