@@ -60,6 +60,10 @@ nosetests.xml
 
 #App
 apps
+dependencies
+ef_themes
+static
+boilerplates
 logs
 .vagrant
 instance/settings.yml

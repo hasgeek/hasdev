@@ -1,61 +1,79 @@
 # App Setting options
 #   port: Integer
-#		port to run app on, apps will be in running mode by default,
-#		only when a port is specified
+#       port to run app on, apps will be in running mode by default,
+#       only when a port is specified
 #   dev_setup: Boolean
-#		Whether the app will be setup for development, viz: python setup.py develop
+#       Whether the app will be setup for development, viz: python setup.py develop
 
 coaster:
-    dev_setup: true
+    type: "dependencies"
 baseframe:
-    dev_setup: true
+    type: "dependencies"
 nodular:
-	dev_setup: true
+    type: "dependencies"
 flask-lastuser:
-	dev_setup: true
+    type: "dependencies"
 nodules:
-	dev_setup: true
+    type: "dependencies"
 flask-commentease:
-	dev_setup: true
+    type: "dependencies"
 lastuser:
+    type: "apps"
     port: 7000
 hasweb:
-	port: 6400
+    type: "apps"
+    port: 6400
 imgee:
-	port: 4500
+    type: "apps"
+    port: 4500
 funnel:
-	port: 3000
+    type: "apps"
+    port: 3000
 geekup:
-	port: 4000
+    type: "apps"
+    port: 4000
 hacknight:
-	port: 8100
+    type: "apps"
+    port: 8100
 hasgeek.tv:
-	port: 8000
+    type: "apps"
+    port: 8000
 eventframe:
-	port: 8090
+    type: "apps"
+    port: 8090
 hasjob:
-	port: 5000
+    type: "apps"
+    port: 5000
 kharcha:
-	port: 9000
+    type: "apps"
+    port: 9000
 peopleflow:
-	port: 8080
+    type: "apps"
+    port: 8080
 serverdown:
+    type: "apps"
 hasnew:
-	port: 8010
+    type: "apps"
+    port: 8010
 contactpoint:
-	port: 8008
+    type: "apps"
+    port: 8008
 rootconf:
-	port: 6200
-droidcon:
-	ef_template: true
-jsfoo:
-	ef_template: true
-fifthelephant:
-	ef_template: true
-cartonama-workshop:
-	ef_template: true
-blog:
-	ef_template: true
+    type: "apps"
+    port: 6200
 ef2:
+    type: "apps"
 hgapp:
+    type: "boilerplates"
+droidcon:
+    type: "ef_themes"
+jsfoo:
+    type: "ef_themes"
+fifthelephant:
+    type: "ef_themes"
+cartonama-workshop:
+    type: "ef_themes"
+blog:
+    type: "ef_themes"
 workshops:
+    type: "static"
