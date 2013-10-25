@@ -13,29 +13,16 @@ def make_parent(app):
         os.mkdir(apps[app]['type'])
 
 def clone(app):
-    try:
-        make_parent(app)
-        os.chdir(apps[app]['type'])
-        if not os.path.exists("%s/.git" % app):
-            print "Cloning %s..." % app
-            os.system('git clone %s' % (settings['options']['repo_url'] % app))
-        os.chdir("..")
-    except KeyboardInterrupt:
-        print "Cloning interrupted. Removing %s..." % app
-        os.system('rm -rf %s' % app)
-        os.chdir("..")
-        print "Removed %s..." % app
-        exit()
+    make_parent(app)
+    os.chdir(apps[app]['type'])
+    if not os.path.exists("%s/.git" % app):
+        print "Cloning %s..." % app
+        os.system('git clone %s' % (settings['options']['repo_url'] % app))
+    os.chdir("..")
 
 def setup(app):
-    remote_app_path = "/vagrant/%s" % dir(app)
-    try:
-        print "Setting up %s for development..." % app
-        run(app, "sudo python setup.py develop")
-    except KeyboardInterrupt:
-        print "Setup interrupted. Removing %s..." % app
-        os.system('rm -rf %s' % dir(app))
-        exit()
+    print "Setting up %s for development..." % app
+    run(app, "sudo python setup.py develop")
 
 def install(app):
     if app == "all":
