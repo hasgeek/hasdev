@@ -20,47 +20,58 @@ flask-commentease:
 lastuser:
     type: "apps"
     port: 7000
+    db: true
 hasweb:
     type: "apps"
     port: 6400
+    db: true
 imgee:
     type: "apps"
     port: 4500
+    db: true
 funnel:
     type: "apps"
     port: 3000
+    db: true
 geekup:
     type: "apps"
     port: 4000
+    db: true
 hacknight:
     type: "apps"
     port: 8100
+    db: true
 hasgeek.tv:
     type: "apps"
     port: 8000
+    db: true
 eventframe:
     type: "apps"
     port: 8090
+    db: true
 hasjob:
     type: "apps"
     port: 5000
+    db: true
 kharcha:
     type: "apps"
     port: 9000
+    db: true
 peopleflow:
     type: "apps"
     port: 8080
-serverdown:
-    type: "apps"
+    db: true
 hasnew:
     type: "apps"
     port: 8010
+    db: true
 contactpoint:
     type: "apps"
     port: 8008
 rootconf:
     type: "apps"
     port: 6200
+    db: true
 ef2:
     type: "apps"
 hgapp:
@@ -75,5 +86,7 @@ cartonama-workshop:
     type: "ef_themes"
 blog:
     type: "ef_themes"
+serverdown:
+    type: "static"
 workshops:
     type: "static"
