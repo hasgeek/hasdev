@@ -18,7 +18,8 @@ Virtual development environment for HasGeek apps using Vagrant.
 ## Usage Notes
 `manage.py` gives you an interface to do various things with the virtual machine.
 
-### init
+### Commands
+#### init
 `python manage.py init`
 
 This is supposed to be run to initialise the environment.
@@ -26,38 +27,33 @@ This is supposed to be run to initialise the environment.
 It handles the following:
 * Creates the VM, if it does not exist
 * Runs the provisioning script
-* Clones and sets up a few app dependencies, viz. coaster, baseframe
-* All repositories are cloned into the `apps` directory under hasdev root
+* Clones and sets up dependencies(`python setup.py develop`)
+* All repositories are cloned into their relevant directory under hasdev root
 * As per your response to the initial prompt, it also clones and installs all configured HasGeek apps
 
-It is run only for the first time and will not be required after you setup your VM once. You will need to run this each time your destroy your VM.
+It is needed to be run only for the first time and will not be required after you setup your VM once. You will need to run this each time you destroy the VM and want to set it up again.
 
-### install
-`python manage.py install --app=<app_name>`
+#### install
+`python manage.py install app_name`
 
-Installs a given HasGeek app, if it is configured in `instance/apps.yml`.
+It handles the following:
+* Clones app_name, if it is configured in `instance/apps.yml`.
+* Runs `sudo pip install -r requirements.txt --upgrade`, if the `requirements.txt` file exists for the app
+* If a database is required for an app, it creates the database
 
-Running this will also run `sudo pip install -r requirements.txt --upgrade`, if the `requirements.txt` file exists for an app.
+You can run `python manage.py install all` to check out and install all configured HasGeek apps with one command.
 
-You can run `python manage.py install --app=all` to install all configured HasGeek apps.
-
-### update
-`python manage.py update --app <app_name>`
+#### update
+`python manage.py update app_name`
 
 Does a git pull and then runs `sudo pip install -r requirements.txt --upgrade`, if the `requirements.txt` file exists for an app.
 
-### run
-`python manage.py run --app <app_name> --execute "<provided_command>"`
+### Accessing the VM
+* You can go to the root folder and run `vagrant ssh` to log into the VM
+* The root folder of hasdev is synced with the `/vagrant` directory inside the VM
 
-CDs to the `app_name` directory & runs the `provided_command`.
-
-E.g. usage:
-
-* `python manage.py run --app nodular --execute "nosetests"`
-
-### provision
-`python manage.py provision`
-Equivalent to running `vagrant provision`
-
-## To-dos
-* Database setups in `python manage.py install`
+### Apps
+* Apps are located in their respective directories in `/vagrant/app_type/app`
+* Go to the app directory
+* Here, you can undertake all actions as specified by the respecive app, like setting it up, running the app, running tests, etc
+P.S. Version control tasks should be run on the host machine
