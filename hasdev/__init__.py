@@ -36,7 +36,7 @@ def install(app):
             setup(app)
         elif apps[app]['type'] != "boilerplates":
             update_requirements(app)
-        if apps[app]['db']:
+        if 'db' in apps[app] and apps[app]['db']:
             print "Creating database %s..." % app
             command = "sudo -u postgres createdb %s;" % app
             command = "%s sudo -u postgres psql -c \"GRANT ALL ON DATABASE %s TO hasgeek\"" % (command, app)
