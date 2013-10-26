@@ -56,4 +56,5 @@ Does a git pull and then runs `sudo pip install -r requirements.txt --upgrade`, 
 * Apps are located in their respective directories in `/vagrant/app_type/app`
 * Go to the app directory
 * Here, you can undertake all actions as specified by the respecive app, like setting it up, running the app, running tests, etc
+
 P.S. Version control tasks should be run on the host machine
