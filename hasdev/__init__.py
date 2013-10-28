@@ -18,6 +18,8 @@ def clone(app):
     if not os.path.exists("%s/.git" % app):
         print "Cloning %s..." % app
         os.system('git clone %s' % (settings['options']['repo_url'] % app))
+        if 'branch' in apps[app]:
+            os.system("git checkout %s" % apps[app]['branch'])
     os.chdir("..")
 
 def setup(app):

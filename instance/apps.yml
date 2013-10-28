@@ -21,6 +21,7 @@ lastuser:
     type: "apps"
     port: 7000
     db: true
+    branch: "hasdev"
 hasweb:
     type: "apps"
     port: 6400
@@ -41,10 +42,12 @@ hacknight:
     type: "apps"
     port: 8100
     db: true
+    branch: "hasdev"
 hasgeek.tv:
     type: "apps"
     port: 8000
     db: true
+    branch: "hasdev"
 eventframe:
     type: "apps"
     port: 8090
@@ -53,6 +56,7 @@ hasjob:
     type: "apps"
     port: 5000
     db: true
+    branch: "hasdev"
 kharcha:
     type: "apps"
     port: 9000
@@ -61,10 +65,12 @@ peopleflow:
     type: "apps"
     port: 8080
     db: true
+    branch: "hasdev"
 hasnew:
     type: "apps"
     port: 8010
     db: true
+    branch: "hasdev"
 contactpoint:
     type: "apps"
     port: 8008
