@@ -39,9 +39,9 @@ echo "Installing libfreetype6-dev..."
 hr
 apt-get install -y libfreetype6-dev -qq
 hr
-echo "Installing webp-dev..."
+echo "Installing libwebp-dev..."
 hr
-apt-get install -y webp-dev -qq
+apt-get install -y libwebp-dev -qq
 hr
 echo "Installing liblcms1-dev..."
 hr
