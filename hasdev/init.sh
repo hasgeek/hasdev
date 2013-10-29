@@ -27,6 +27,26 @@ echo "Installing python-dev..."
 hr
 apt-get install -y python-dev -qq
 hr
+echo "Installing libjpeg-dev..."
+hr
+apt-get install -y libjpeg-dev -qq
+hr
+echo "Installing libpng-dev..."
+hr
+apt-get install -y libpng-dev -qq
+hr
+echo "Installing libfreetype6-dev..."
+hr
+apt-get install -y libfreetype6-dev -qq
+hr
+echo "Installing webp-dev..."
+hr
+apt-get install -y webp-dev -qq
+hr
+echo "Installing liblcms1-dev..."
+hr
+apt-get install -y liblcms1-dev -qq
+hr
 echo "Installing python setuptools ..."
 hr
 wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py
