@@ -92,6 +92,9 @@ hr
 gem install compass
 hr
 
+echo "Updating /etc/hosts file on virtual machine..."
+python /vagrant/hasdev/hosts.py
+
 # echo "Installing uglifyjs..."
 # npm install uglify-js
 # uglifyjs installs are just failing because of some dependency on nodejs app source-map.
