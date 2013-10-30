@@ -1,16 +1,6 @@
 import os
-from yaml import load
-
-apps = load(file('instance/apps.yml', 'r'))
-settings = load(file('instance/settings.yml', 'r'))
-
-def dir(app):
-    return "%s/%s" % (apps[app]['type'], app)
-
-def make_parent(app):
-    if not os.path.exists(apps[app]['type']):
-        print "Directory %s doesn't exist. Creating %s..." % (apps[app]['type'], apps[app]['type'])
-        os.mkdir(apps[app]['type'])
+from .settings import apps, settings
+from .helpers import *
 
 def clone(app):
     make_parent(app)
@@ -68,14 +58,6 @@ def update_requirements(app):
         run(app, "sudo pip install -r requirements.txt --upgrade")
     else:
         print "requirements.txt not found for %s" % app
-
-def run(app, command):
-    if os.path.exists(dir(app)):
-        remote_app_path = "/vagrant/%s" % dir(app)
-        command = "cd %s; %s" % (remote_app_path, command)
-        os.system("vagrant ssh -c '%s'" % command)
-    else:
-        print "App does not exist..."
 
 def init():
     choice = ""

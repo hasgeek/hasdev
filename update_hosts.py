@@ -2,10 +2,9 @@
 
 import sys
 from yaml import load
+from hasdev.settings import apps, settings
 
 marker = "#" + "*===" * 10 + "\n"
-apps = load(file('/vagrant/instance/apps.yml', 'r'))
-settings = load(file('/vagrant/instance/settings.yml', 'r'))
 
 lines = []
 with open("/etc/hosts", 'r') as hosts:
@@ -24,8 +23,7 @@ try:
 		hosts.write("".join(lines))
 		hosts.write(marker)
 		if len(app_hosts) > 1:
-			print "Writing new hosts file..."
 			hosts.write(" ".join(app_hosts) + "\n")
-			print "Written new hosts file..."
+			print "hosts file updated..."
 except Exception as e:
 	print "Error: %s" % e

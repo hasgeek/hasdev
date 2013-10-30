@@ -7,6 +7,17 @@ apps = YAML::load_file('instance/apps.yml')
 
 VAGRANTFILE_API_VERSION = "2"
 
+# http://rexchung.com/2007/02/01/hash-recursive-merge-in-ruby/
+class Hash
+    def recursive_merge(h)
+        self.merge!(h) {|key, _old, _new| if _old.class == Hash then _old.recursive_merge(_new) else _new end  }
+    end
+end
+
+if settings.has_key?('apps') and settings['apps'].is_a?(Hash)
+    apps.recursive_merge(settings['apps'])
+end
+
 app_hosts = []
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|

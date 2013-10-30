@@ -91,9 +91,14 @@ echo "Installing compass..."
 hr
 gem install compass
 hr
+echo "Installing PyYAML..."
+hr
+pip install PyYAML
+hr
 
 echo "Updating /etc/hosts file on virtual machine..."
-python /vagrant/hasdev/hosts.py
+cd /vagrant
+python update_hosts.py
 
 # echo "Installing uglifyjs..."
 # npm install uglify-js
