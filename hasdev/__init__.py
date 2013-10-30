@@ -15,6 +15,8 @@ def clone(app):
 
 def setup(app):
     print "Setting up %s for development..." % app
+    if app == 'baseframe':
+        os.system("sudo pip install webassets==0.8")
     run(app, "sudo python setup.py develop")
 
 def install(app):
