@@ -22,13 +22,14 @@ flask-lastuser:
     type: "dependencies"
 nodules:
     type: "dependencies"
+    branch: "develop"
 flask-commentease:
     type: "dependencies"
 lastuser:
     type: "apps"
     port: 7000
     db: true
-    branch: "hasdev"
+    branch: "hasdev" # Will change these back to correct branches, once hasdev is in production.
 hasweb:
     type: "apps"
     port: 6400
@@ -37,6 +38,7 @@ imgee:
     type: "apps"
     port: 4500
     db: true
+    branch: "develop"
 funnel:
     type: "apps"
     port: 3000
@@ -91,12 +93,16 @@ hgapp:
     type: "boilerplates"
 droidcon:
     type: "ef_themes"
+    branch: "2013-eventframe"
 jsfoo:
     type: "ef_themes"
+    branch: "2013-eventframe"
 fifthelephant:
     type: "ef_themes"
+    branch: "2013-eventframe"
 cartonama-workshop:
     type: "ef_themes"
+    branch: "2012-eventframe"
 blog:
     type: "ef_themes"
 serverdown:
