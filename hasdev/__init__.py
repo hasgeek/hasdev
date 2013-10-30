@@ -1,5 +1,4 @@
 import os
-from .settings import apps, settings
 from .helpers import *
 
 def clone(app):
