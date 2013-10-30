@@ -15,13 +15,14 @@ def clone(app):
 
 def setup(app):
     print "Setting up %s for development..." % app
+    command = []
     if app == 'baseframe':
-        os.system("sudo pip install webassets==0.8")
-    run(app, "sudo python setup.py develop")
+        command.append("sudo pip install webassets==0.8")
+    command.append("sudo python setup.py develop")
     if app == 'baseframe':
-        os.chdir("baseframe")
-        os.system("make")
-        os.chdir("..")
+        command.append("cd baseframe")
+        command.append("make")
+    run(app, ";".join(command))
 
 def install(app):
     if app == "all":
