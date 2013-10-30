@@ -1,11 +1,7 @@
 #!/usr/bin/env python
 import os
 import sys
-from yaml import load
 import hasdev
-
-apps = load(file('instance/apps.yml', 'r'))
-settings = load(file('instance/settings.yml', 'r'))
 
 if __name__ == "__main__":
     args = sys.argv
