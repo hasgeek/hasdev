@@ -38,7 +38,7 @@ def install(app):
             update_requirements(app)
         if 'db' in apps[app] and apps[app]['db']:
             print "Creating database %s..." % app
-            command = "sudo -u postgres createdb %s;" % app
+            command = "sudo -u postgres createdb %s;" % app.replace(".", "")
             command = "%s sudo -u postgres psql -c \"GRANT ALL ON DATABASE %s TO hasgeek\"" % (command, app)
             os.system("vagrant ssh -c '%s'" % command)
     else:
