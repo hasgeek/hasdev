@@ -1,9 +1,15 @@
 # App Setting options
+#   type: String
+#       Type of project.
+#       This will also be the directory in which the project gets checked out.
+#       Values: dependencies|apps|ef_themes|boilerplates|static
 #   port: Integer
 #       port to run app on, apps will be in running mode by default,
 #       only when a port is specified
-#   dev_setup: Boolean
-#       Whether the app will be setup for development, viz: python setup.py develop
+#   db: Boolean
+#       If true, a database named the same as the app will be created.
+#   branch: String
+#       If specified, this branch will be checked out after cloning the repo.
 
 coaster:
     type: "dependencies"
