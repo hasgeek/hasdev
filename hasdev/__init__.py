@@ -8,7 +8,9 @@ def clone(app):
         print "Cloning %s..." % app
         os.system('git clone %s' % (settings['options']['repo_url'] % app))
     if 'branch' in apps[app]:
+        os.chdir(app)
         os.system("git checkout %s" % apps[app]['branch'])
+        os.chdir("..")
     os.chdir("..")
 
 def setup(app):
