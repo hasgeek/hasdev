@@ -18,6 +18,10 @@ def setup(app):
     if app == 'baseframe':
         os.system("sudo pip install webassets==0.8")
     run(app, "sudo python setup.py develop")
+    if app == 'baseframe':
+        os.chdir("baseframe")
+        os.system("make")
+        os.chdir("..")
 
 def install(app):
     if app == "all":
