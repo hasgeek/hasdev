@@ -15,4 +15,4 @@ if __name__ == "__main__":
     elif args[1] == 'update':
         hasdev.update(args[2])
     else:
-        print "Invalid command"
+        print "Usage: python manage.py init|install|update <app_name>"
