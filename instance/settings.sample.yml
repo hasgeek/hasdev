@@ -1,6 +1,14 @@
 vm:
+    box: "precise64"
+    box_url: "http://files.vagrantup.com/precise64.box"
     hostname: "dev.hasgeek.com"
     host_ip: "10.10.10.5"
 options:
     base_host: "%s.dev.hasgeek.com"
     repo_url: "git@github.com:hasgeek/%s.git"
+apps:
+    # existing_or_new_app_name:
+    #     new_option: "can be introduced"
+    #     existing_option: "can be overridden"
+    hacknight:
+        port: 10001
