@@ -56,11 +56,12 @@ def update(app):
 
 def pull(app):
     if os.path.exists(dir(app)):
+        print "Updating %s..." % app
         os.chdir(dir(app))
         os.system("git pull")
         os.chdir("../..")
     else:
-        print "App does not exist..."
+        print "App %s does not exist..." % app
 
 def update_requirements(app):
     print "Setting up requirements..."
