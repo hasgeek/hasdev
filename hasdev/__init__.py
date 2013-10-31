@@ -45,6 +45,9 @@ def install(app):
         print "%s not configured"
 
 def update(app):
+    if app == "all":
+        for app in apps:
+            update(app)
     pull(app)
     if apps[app]['type'] == "dependencies":
         setup(app)
@@ -55,7 +58,6 @@ def pull(app):
     if os.path.exists(dir(app)):
         os.chdir(dir(app))
         os.system("git pull")
-        update_requirements(app)
         os.chdir("../..")
     else:
         print "App does not exist..."
