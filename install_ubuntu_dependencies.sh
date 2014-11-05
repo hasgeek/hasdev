@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-echo "HasDev dependencies installer."
+echo "Hasdev dependencies installer."
 echo "Updating software repo lists..."
 echo ""
 sudo apt-get update
@@ -11,7 +11,7 @@ echo ""
 sudo apt-get install -y python-dev gcc g++ binutils build-essential git make curl wget
 
 echo ""
-echo "Installing other libraries, used as extensions by various HasGeek apps..."
+echo "Installing other libraries, used as extensions by various Hasgeek apps..."
 echo ""
 sudo apt-get install -y libxml2 libxml2-dev libxslt1-dev libffi-dev
 
