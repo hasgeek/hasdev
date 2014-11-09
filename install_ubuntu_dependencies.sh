@@ -25,6 +25,10 @@ echo "Installing PostgreSQL."
 sudo apt-get install postgresql libpq-dev
 
 echo ""
+echo "Installing Redis."
+sudo apt-get install redis-server
+
+echo ""
 echo "Installing Chris Lea's PPA for the latest versions of Node.js, used as a JS runtime..."
 sudo apt-get install -y python-software-properties
 sudo add-apt-repository ppa:chris-lea/node.js
