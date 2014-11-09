@@ -21,6 +21,10 @@ sudo apt-get install postfix
 echo "Postfix is now installed. Please don't forget to configure your SMTP settings in /etc/postfix/main.cf"
 
 echo ""
+echo "Installing PostgreSQL."
+sudo apt-get install postgresql libpq-dev
+
+echo ""
 echo "Installing Chris Lea's PPA for the latest versions of Node.js, used as a JS runtime..."
 sudo apt-get install -y python-software-properties
 sudo add-apt-repository ppa:chris-lea/node.js
