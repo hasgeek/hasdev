@@ -30,7 +30,7 @@ sudo apt-get install redis-server
 
 echo ""
 echo "Installing Chris Lea's PPA for the latest versions of Node.js, used as a JS runtime..."
-sudo apt-get install -y python-software-properties
+sudo apt-get install -y python-software-properties software-properties-common
 sudo add-apt-repository ppa:chris-lea/node.js
 sudo apt-get update
 sudo apt-get install -y nodejs
